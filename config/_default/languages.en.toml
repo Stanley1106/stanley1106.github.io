@@ -1,0 +1,17 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Stanley"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+author = { image = "pfp.gif", name = "Stanley", bio = "大同大學資訊工程學系學生，專注於資安研究、滲透測試與惡意程式分析。", headline = "Always Learning, Always Breaking, Always Building" }
+description = "分享資安筆記、滲透測試與惡意程式分析的個人技術部落格。"
+secondaryLogo = "."
+
+[author]
+links = [ { email = "Stanley1106chen@gmail.com" }, { github = "https://github.com/Stanley1106" }, { instagram = "https://www.instagram.com/stanley_1106_/" }, { linkedin = "https://www.linkedin.com/in/stanley1106/" } ]
