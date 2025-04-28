@@ -1,4 +1,10 @@
-# 關於我
+---
+title: "關於我"
+layout: "page"
+draft: false
+date: 2025-04-28
+---
+
 
 ![我的個人照片](pfp_hu2188811406460856575.gif)
 
