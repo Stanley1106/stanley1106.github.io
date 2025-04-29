@@ -1,9 +1,10 @@
 # others
-node_modules
+node_modules/
 .hugo_build.lock
 
 # Obsidian
 .obsidian/
+templates/
 
 # OS generated files
 .DS_Store
