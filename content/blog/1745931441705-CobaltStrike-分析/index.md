@@ -8,7 +8,9 @@ tags:
   - MalwareAnalysis
 ---
 
-這篇文章整理我在網路上蒐集到 Cobalt Strike 的 Yara rules，我們可以從甚麼地方去分析一隻樣本是不是 Cobalt Strike，接下來會逐一說明這些 YARA Rules為什麼會這樣寫，以及根據哪些特徵去設計。
+這篇文章整理我在網路上蒐集到 Cobalt Strike 的 Yara rules，可以從甚麼地方去分析一隻樣本是不是 Cobalt Strike。
+
+接下來會逐一說明這些 YARA Rules為什麼會這樣寫，以及根據哪些特徵去設計。
 ## Cobalt Strike 是什麼？
 
 Cobalt Strike 是合法的滲透測試工具，原本是給紅隊用來模擬駭客攻擊的。因為功能太強，很多駭客也拿來當攻擊工具，所以在資安圈很常遇到。  
