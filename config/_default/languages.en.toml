@@ -10,7 +10,6 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 description = "分享資安筆記、滲透測試與惡意程式分析的個人技術部落格。"
-secondaryLogo = "."
 
 [params.author]
 name = "Stanley"
