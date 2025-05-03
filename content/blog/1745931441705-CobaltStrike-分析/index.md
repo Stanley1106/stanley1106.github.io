@@ -191,4 +191,3 @@ strings:
 - [protections-artifacts/yara/rules/Windows_Trojan_CobaltStrike.yar at main · elastic/protections-artifacts](https://github.com/elastic/protections-artifacts/blob/main/yara/rules/Windows_Trojan_CobaltStrike.yar)
 - [GCTI/YARA/CobaltStrike at main · chronicle/GCTI](https://github.com/chronicle/GCTI/tree/main/YARA/CobaltStrike)
 - [signature-base/yara/apt_cobaltstrike.yar at master · Neo23x0/signature-base](https://github.com/Neo23x0/signature-base/blob/master/yara/apt_cobaltstrike.yar)
-- 
