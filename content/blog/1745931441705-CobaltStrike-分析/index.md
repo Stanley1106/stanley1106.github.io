@@ -13,8 +13,9 @@ tags:
 接下來會逐一說明這些 YARA Rules為什麼會這樣寫，以及根據哪些特徵去設計。
 ## Cobalt Strike 是什麼？
 
-Cobalt Strike 是合法的滲透測試工具，原本是給紅隊用來模擬駭客攻擊的。因為功能太強，很多駭客也拿來當攻擊工具，所以在資安圈很常遇到。  
-
+Cobalt Strike 是合法的滲透測試工具，原本是給紅隊用來模擬駭客攻擊的。因為功能太強，很多駭客也拿來當攻擊工具，所以在資安圈很常遇到。
+![](index-20250503-225413.png)
+[Cobalt Strike 官網截圖](https://www.cobaltstrike.com/)
 ## 名詞解釋
 
 - **Beacon**: Cobalt Strike 的後門程式，會在受害者電腦上執行，並與攻擊者的伺服器通訊。
