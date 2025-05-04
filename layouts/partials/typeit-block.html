@@ -1,0 +1,27 @@
+<!-- TypeIt.js animation block -->
+<div id="typeit-block" class="my-3 text-2xl font-mono italic tracking-wide text-neutral-600 dark:text-neutral-300"
+>
+</div>
+
+<!-- Include TypeIt library if not already included -->
+{{ if not ($.Page.Scratch.Get "typeit-included") }}
+  {{ $.Page.Scratch.Set "typeit-included" true }}
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+{{ end }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new TypeIt("#typeit-block", {
+      strings: [
+        'Always Learning <span style="font-style: normal;">💻</span>',
+        'Always Breaking <span style="font-style: normal;">💥</span>',
+        'Always Building <span style="font-style: normal;">⚙️</span>'
+      ],
+      speed: 200,
+      waitUntilVisible: true,
+      loop: true,
+      breakLines: false,
+      lifeLike: true
+    }).go();
+  });
+</script>

@@ -15,7 +15,6 @@ description = "分享資安筆記、滲透測試與惡意程式分析的個人�
 name = "Stanley"
 image = "pfp.gif"
 bio = "大同大學資訊工程學系學生，專注於資安研究、滲透測試與惡意程式分析。"
-headline = "Always Learning, Always Breaking, Always Building"
 
 links = [
   { email = "mailto:Stanley1106chen@gmail.com" },
