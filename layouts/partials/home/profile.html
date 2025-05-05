@@ -71,6 +71,7 @@
     transition: filter 0.3s ease;
     will-change: filter;
     z-index: -1;
+    filter: blur(5px); /* 添加初始模糊效果 */
   }
   
   .bg-overlay {
@@ -86,15 +87,18 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const bgImage = document.querySelector('.bg-image');
+    const initialBlur = 5 // 初始模糊效果，與CSS中設置的值一致 (3px)
     
     window.addEventListener('scroll', function() {
       const scrollPosition = window.scrollY;
-      const maxBlur = 15; // Maximum blur in pixels
+      const maxBlur = 30; // Maximum blur in pixels
       const scrollThreshold = 300; // When to reach max blur
       
-      let blurAmount = 0;
+      let blurAmount = initialBlur; // 起始值設為初始模糊值
       if (scrollPosition > 0) {
-        blurAmount = Math.min(maxBlur, (scrollPosition / scrollThreshold) * maxBlur);
+        // 計算額外模糊量，最小為初始模糊值
+        const additionalBlur = Math.min(maxBlur - initialBlur, (scrollPosition / scrollThreshold) * (maxBlur - initialBlur));
+        blurAmount = initialBlur + additionalBlur;
       }
       
       bgImage.style.filter = `blur(${blurAmount}px)`;
