@@ -31,7 +31,7 @@ showMoreLinkDest = "/blog"
 cardView = "Enable"
 cardViewScreenWidth = ""
 layoutBackgroundBlur = false
-homepageImage = "."
+homepageImage = ""
 
 [article]
 showDate = true
