@@ -36,3 +36,34 @@
     --color-secondary-900: 30, 80, 120;
   }
   
+/* 卡片懸停效果 - 只有卡片上浮，照片不放大 */
+a:has(.min-h-full.border.shadow-2xl) {
+  display: block;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+a:has(.min-h-full.border.shadow-2xl):hover {
+  transform: translateY(-7px);
+}
+
+/* 卡片外觀動畫效果 */
+.min-h-full.border.shadow-2xl {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover .min-h-full.border.shadow-2xl {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25) !important;
+  border-color: rgba(var(--color-primary-500), 0.5) !important;
+  background-color: rgba(var(--color-primary-700), 0.03);
+}
+
+/* 卡片標題動畫效果 */
+.font-bold.text-xl {
+  transition: color 0.3s ease;
+}
+
+a:hover .font-bold.text-xl {
+  color: rgba(var(--color-primary-500), 1) !important;
+}
+
