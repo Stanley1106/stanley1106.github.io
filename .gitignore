@@ -17,7 +17,7 @@ Thumbs.db
 
 # Hugo generated files
 public/
-resources/_gen/
+resources/
 assets/jsconfig.json
 hugo_stats.json
 
