@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{ .Scratch.Set "scope" "single" }}
+
+<article>
+  {{ if .Params.showHero | default (.Site.Params.article.showHero | default false) }}
+  {{ $heroStyle := .Params.heroStyle }}
+  {{ if not $heroStyle }}{{ $heroStyle = .Site.Params.article.heroStyle }}{{ end }}
+  {{ $heroStyle := print "hero/" $heroStyle ".html" }}
+  {{ if templates.Exists ( printf "partials/%s" $heroStyle ) }}
+  {{ partial $heroStyle . }}
+  {{ else }}
+  {{ partial "hero/basic.html" . }}
+  {{ end }}
+  {{ end }}
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
+    {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      {{ .Title | emojify }}
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      <div class="flex flex-row flex-wrap items-center">
+        {{ partial "article-meta/basic.html" (dict "context" . "scope" "single") }}
+      </div>
+    </div>
+  </header>
+
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    <div class="min-w-0 min-h-0 max-w-fit">      <div class="article-content max-w-prose mb-20">
+        {{ .Content }}        <h2 class="relative group">🎈 Friend Links</h2>        <div class="friend-list">
+          {{ range .Site.Data.friends }}
+            <div class="frienddiv-wrapper">
+              <a target="_blank" href="{{ .url }}" title="{{ .name }}" class="friendurl-card">
+                <div class="frienddiv">
+                  <div class="frienddivleft">
+                    <figure class="friend-image">
+                      <img class="myfriend" src="{{ .avatar }}" alt="{{ .name }}" data-zoomable>
+                    </figure>
+                  </div>
+                  <div class="frienddivright">
+                    <div class="friendname">{{ .name }}</div>
+                    <div class="friendinfo">{{ .description }}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ if not (.Params.disableAnchoredHeadings | default ($.Site.Params.article.disableAnchoredHeadings | default false)) }}
+    {{ partial "toc.html" . }}
+    {{ end }}
+  </section>
+</article>
+
+{{ if .Site.Params.article.lastModDisplay | default false }}
+{{ partial "article-lastmod.html" . }}
+{{ end }}
+
+{{ if not (.Params.disableRelated | default ($.Site.Params.article.disableRelated | default false)) }}
+{{ partial "related.html" . }}
+{{ end }}
+
+{{ $showShare := (.Params.showShare | default (.Site.Params.article.showShare | default false)) }}
+{{ if $showShare }}
+  {{ partial "article-share.html" . }}
+{{ end }}
+
+{{ end }}

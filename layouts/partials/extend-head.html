@@ -1,0 +1,2 @@
+{{ $customCSS := resources.Get "css/friends.css" | css.Sass | resources.Minify }}
+<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" />

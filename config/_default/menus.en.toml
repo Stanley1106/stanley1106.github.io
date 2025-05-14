@@ -26,10 +26,16 @@ identifier = "0t3omD20lp"
 weight = 4
 
 [[main]]
+name = "Friends"
+pageRef = "/friends"
+identifier = "friendsPage"
+weight = 5
+
+[[main]]
 name = "Tags"
 pageRef = "/tags"
 identifier = "a9f1jfjIEX"
-weight = 9999
+weight = 6
 
 [[footer]]
 none = "none"
