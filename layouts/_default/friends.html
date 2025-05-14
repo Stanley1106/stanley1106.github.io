@@ -1,6 +1,34 @@
 {{ define "main" }}
 {{ .Scratch.Set "scope" "single" }}
 
+<style>
+/* Custom overrides for friends cards */
+.friendurl-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Ensure the right side of the card is clickable */
+.frienddiv {
+  cursor: default;
+}
+
+/* Keep the friend image with a zoom-in cursor */
+.friend-image {
+  cursor: zoom-in;
+}
+
+/* Make the text part look clickable on hover */
+.frienddivright {
+  cursor: pointer;
+}
+
+.frienddivright:hover .friendname {
+  color: var(--color-primary-600);
+}
+</style>
+
 <article>
   {{ if .Params.showHero | default (.Site.Params.article.showHero | default false) }}
   {{ $heroStyle := .Params.heroStyle }}
@@ -30,21 +58,18 @@
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     <div class="min-w-0 min-h-0 max-w-fit">      <div class="article-content max-w-prose mb-20">
         {{ .Content }}        <h2 class="relative group">🎈 Friend Links</h2>        <div class="friend-list">
-          {{ range .Site.Data.friends }}
-            <div class="frienddiv-wrapper">
-              <a target="_blank" href="{{ .url }}" title="{{ .name }}" class="friendurl-card">
-                <div class="frienddiv">
-                  <div class="frienddivleft">
-                    <figure class="friend-image">
-                      <img class="myfriend" src="{{ .avatar }}" alt="{{ .name }}" data-zoomable>
-                    </figure>
-                  </div>
-                  <div class="frienddivright">
-                    <div class="friendname">{{ .name }}</div>
-                    <div class="friendinfo">{{ .description }}</div>
-                  </div>
+          {{ range .Site.Data.friends }}            <div class="frienddiv-wrapper">
+              <div class="frienddiv" data-friend-url="{{ .url }}">
+                <div class="frienddivleft">
+                  <figure class="friend-image">
+                    <img class="myfriend" src="{{ .avatar }}" alt="{{ .name }}" data-zoomable>
+                  </figure>
                 </div>
-              </a>
+                <div class="frienddivright">
+                  <div class="friendname">{{ .name }}</div>
+                  <div class="friendinfo">{{ .description }}</div>
+                </div>
+              </div>
             </div>
           {{ end }}
         </div>
@@ -69,5 +94,27 @@
 {{ if $showShare }}
   {{ partial "article-share.html" . }}
 {{ end }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add click handlers to friend cards but exclude clicks on images
+    document.querySelectorAll('.frienddiv').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // If the click was on or inside the image or figure, do nothing
+        if (e.target.classList.contains('myfriend') || 
+            e.target.classList.contains('friend-image') ||
+            e.target.closest('.friend-image')) {
+          return;
+        }
+        
+        // Otherwise, navigate to the friend's URL
+        const url = this.getAttribute('data-friend-url');
+        if (url) {
+          window.open(url, '_blank');
+        }
+      });
+    });
+  });
+</script>
 
 {{ end }}
