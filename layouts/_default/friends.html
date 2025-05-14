@@ -56,9 +56,12 @@
   </header>
 
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
-    <div class="min-w-0 min-h-0 max-w-fit">      <div class="article-content max-w-prose mb-20">
-        {{ .Content }}        <h2 class="relative group">🎈 Friend Links</h2>        <div class="friend-list">
-          {{ range .Site.Data.friends }}            <div class="frienddiv-wrapper">
+    <div class="min-w-0 min-h-0 max-w-fit">      
+      <div class="article-content max-w-prose mb-20">
+        <h2 class="relative group">🎈 Friend Links</h2>
+        <div class="friend-list">
+          {{ range .Site.Data.friends }}
+            <div class="frienddiv-wrapper">
               <div class="frienddiv" data-friend-url="{{ .url }}">
                 <div class="frienddivleft">
                   <figure class="friend-image">
@@ -71,8 +74,11 @@
                 </div>
               </div>
             </div>
-          {{ end }}
-        </div>
+          {{ end }}        </div>
+        
+        <hr class="friend-section-divider my-8 border-t-2 border-neutral-200 dark:border-neutral-700">
+        
+        {{ .Content }}
       </div>
     </div>
 

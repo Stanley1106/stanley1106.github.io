@@ -5,9 +5,10 @@ url: "/friends/"
 summary: "Friend Links"
 showHero: true
 heroStyle: "basic"
+date: 2025-05-14
 ---
 
-Feel free to [✉email me](mailto:stanley1106chen@gmail.com) to exchange links. Just share your website link, avatar, and bio.
+歡迎來信 [✉email](mailto:stanley1106chen@gmail.com) 跟我交換友站連結！
 
 My link info:
 
