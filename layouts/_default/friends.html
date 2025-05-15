@@ -78,14 +78,8 @@
         
         <hr class="friend-section-divider my-8 border-t-2 border-neutral-200 dark:border-neutral-700">
         
-        {{ .Content }}
-      </div>
-    </div>
-
-    {{ if not (.Params.disableAnchoredHeadings | default ($.Site.Params.article.disableAnchoredHeadings | default false)) }}
-    {{ partial "toc.html" . }}
-    {{ end }}
-  </section>
+        {{ .Content }}      </div>
+    </div></section>
 </article>
 
 {{ if .Site.Params.article.lastModDisplay | default false }}
