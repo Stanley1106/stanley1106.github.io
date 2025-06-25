@@ -2,7 +2,7 @@
 title: 如何解決 OneDrive 移除後殘留資料夾
 date: 2025-06-25
 draft: false
-description: OneDrive 刪掉後，會發現系統資料夾依然指向 OneDrive 路徑，本教學將帶你利用登錄編輯器調整路徑設定，徹底解決殘留問題。
+summary: OneDrive 刪掉後，會發現系統資料夾依然指向 OneDrive 路徑，本教學將帶你利用註冊表調整路徑設定，徹底解決 OneDrive 殘留問題。
 tags:
   - OneDrive
   - Windows
