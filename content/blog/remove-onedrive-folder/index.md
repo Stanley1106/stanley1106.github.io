@@ -81,5 +81,5 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell 
 
 ### 參考資料
 
-- https://support.microsoft.com/zh-tw/topic/%E8%AE%8A%E6%9B%B4%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E9%A0%90%E8%A8%AD%E8%B3%87%E6%96%99%E5%A4%BE-9545fd65-591f-4feb-92b8-9bbc9f5f823c
-- https://support.microsoft.com/zh-tw/topic/%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E6%AE%BC%E5%B1%A4%E8%B3%87%E6%96%99%E5%A4%BE%E9%87%8D%E6%96%B0%E5%B0%8E%E5%90%91%E8%87%B3%E6%8C%87%E5%AE%9A%E7%9A%84%E8%B7%AF%E5%BE%91%E4%BD%BF%E7%94%A8%E8%A8%AD%E5%AE%9A%E6%AA%94%E6%A8%99%E8%A8%98-ed6289ae-1f9c-b874-4e8c-20d23ea65b2e
+- https://support.microsoft.com/en-us/office/change-the-default-folder-for-storing-databases-9545fd65-591f-4feb-92b8-9bbc9f5f823c
+- https://support.microsoft.com/en-us/topic/how-to-redirect-user-shell-folders-to-a-specified-path-by-using-profile-maker-ed6289ae-1f9c-b874-4e8c-20d23ea65b2e
