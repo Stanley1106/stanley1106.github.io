@@ -47,9 +47,23 @@ sudo tailscale up
 
 在其他裝置上也安裝 Tailscale，並登錄帳號，這時會發現都在個 Tailscale 內網裡面。
 
-5. **測試連線**
+5. **安裝並開啟 SSH 服務**
 
-記得要先在 Ubuntu 上啟動 SSH 服務，然後就可以試試看用其他裝置連線
+Ubuntu 預設沒有開 SSH server，需要自己安裝：
+```bash
+sudo apt update
+sudo apt install openssh-server -y
+```
+
+開啟自動啟動 SSH 服務
+```bash
+sudo systemctl enable ssh
+```
+
+
+6. **測試連線**
+
+然後就可以試試看用其他裝置連線
 ```bash
 ssh 使用者名稱@tailscale-ip
 ```
