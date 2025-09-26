@@ -60,6 +60,10 @@ sudo apt install openssh-server -y
 sudo systemctl enable ssh
 ```
 
+啟動 ssh 服務
+```bash
+sudo systemctl start ssh
+```
 
 6. **測試連線**
 
