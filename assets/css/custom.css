@@ -1,5 +1,5 @@
 /* Keep tall screenshots readable without letting them dominate the article. */
-.article-content img {
+.article-content:not(.friends-content) img {
   display: block;
   width: auto;
   height: auto;
