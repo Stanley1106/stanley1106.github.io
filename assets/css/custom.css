@@ -1,0 +1,9 @@
+/* Keep tall screenshots readable without letting them dominate the article. */
+.article-content img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(70vh, 720px);
+  margin-inline: 0 auto;
+}
