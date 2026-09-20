@@ -9,6 +9,10 @@ tags:
   - Writeup
 ---
 
+去年也曾參加過 is1ab 新生盃，今年進入北科資訊安全研究所並加入實驗室後再次參與，最後拿到第 3 名。以下記錄這次比賽的解題過程。
+
+![](scoreboard.png)
+
 ## A Quiet Game
 
 這題提供一個 HTML 檔案以及 PGN 檔案
