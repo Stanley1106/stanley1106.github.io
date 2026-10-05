@@ -1,5 +1,5 @@
 :root {
-    --color-neutral: 230, 233, 240; /* 主要文字（接近白但不刺眼） */
+    --color-neutral: 255, 255, 255; /* Blowfish: light background and dark-mode text */
     --color-neutral-50: 245, 246, 250;
     --color-neutral-100: 235, 237, 245;
     --color-neutral-200: 210, 213, 230;
