@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <header class="mt-5">
+    <h1 class="text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  <section class="projects-grid mt-8 w-full">
+    {{ range .Pages.ByWeight }}
+      <article class="project-card border border-neutral-200 dark:border-neutral-700 rounded-md">
+        <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer external" aria-label="{{ .Title }} on GitHub (opens in a new tab)" class="project-card-link group">
+          <div class="project-card-header">
+            <h2 class="text-neutral-800 group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400">{{ .Title }}</h2>
+            <span aria-hidden="true" class="project-card-github text-neutral-500 group-hover:text-primary-600 dark:text-neutral-400 dark:group-hover:text-primary-400">GitHub &#8599;</span>
+          </div>
+          <p class="project-summary text-neutral-500 dark:text-neutral-400">{{ .Summary | plainify }}</p>
+          <ul class="project-tags" aria-label="Technologies">
+            {{ range .Params.technologies }}
+              <li class="rounded-md border border-primary-400 text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">{{ . }}</li>
+            {{ end }}
+          </ul>
+        </a>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}
