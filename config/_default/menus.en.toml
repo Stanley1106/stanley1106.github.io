@@ -20,8 +20,8 @@ identifier = "F4h3d56O9Y"
 weight = 3
 
 [[main]]
-name = "Project"
-url = "https://github.com/Stanley1106?tab=repositories"
+name = "Projects"
+pageRef = "/projects"
 identifier = "0t3omD20lp"
 weight = 4
 

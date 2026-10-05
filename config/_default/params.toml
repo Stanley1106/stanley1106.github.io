@@ -3,6 +3,7 @@ defaultAppearance = "dark"
 autoSwitchAppearance = false
 enableSearch = true
 enableCodeCopy = true
+mainSections = ["blog"]
 replyByEmail = false
 disableImageOptimization = false
 disableTextInHeader = false
